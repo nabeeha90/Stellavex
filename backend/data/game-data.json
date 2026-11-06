@@ -1,0 +1,633 @@
+{
+ "g0": 9.80665,
+ "rockets": [
+  {
+   "id": "sparrow",
+   "n": "Sparrow",
+   "c": 60,
+   "cap": 3500,
+   "rel": 0.9,
+   "d": "Small and cheap",
+   "H": 14,
+   "Rd": 1.6,
+   "E": 1,
+   "B": 0
+  },
+  {
+   "id": "condor",
+   "n": "Condor",
+   "c": 140,
+   "cap": 10000,
+   "rel": 0.94,
+   "d": "Balanced workhorse",
+   "H": 22,
+   "Rd": 2.4,
+   "E": 3,
+   "B": 2
+  },
+  {
+   "id": "colossus",
+   "n": "Colossus",
+   "c": 320,
+   "cap": 22000,
+   "rel": 0.97,
+   "d": "Huge and reliable",
+   "H": 34,
+   "Rd": 3.4,
+   "E": 5,
+   "B": 4
+  }
+ ],
+ "buses": [
+  {
+   "id": "basic",
+   "n": "Basic craft",
+   "c": 40,
+   "dry": 800,
+   "max": 4000,
+   "isp": 330,
+   "rel": 0.9,
+   "d": "Cheap, weak engine"
+  },
+  {
+   "id": "hydrolox",
+   "n": "Efficient craft",
+   "c": 90,
+   "dry": 1100,
+   "max": 6500,
+   "isp": 450,
+   "rel": 0.93,
+   "d": "Strong engine, costs more"
+  },
+  {
+   "id": "nep",
+   "n": "Nuclear-electric craft",
+   "c": 150,
+   "dry": 2400,
+   "max": 1500,
+   "isp": 2400,
+   "rel": 0.9,
+   "d": "SR-1 Freedom style: very efficient, heavy"
+  }
+ ],
+ "payloads": [
+  {
+   "id": "rover",
+   "n": "Rover",
+   "t": "mobility",
+   "m": 900,
+   "c": 120,
+   "pts": 40,
+   "rel": 0.92,
+   "d": "Drives on Mars",
+   "pw": 60,
+   "dt": 20
+  },
+  {
+   "id": "atmo",
+   "n": "Air sensor",
+   "t": "atmosphere",
+   "m": 120,
+   "c": 25,
+   "pts": 20,
+   "rel": 0.96,
+   "d": "Reads the atmosphere",
+   "pw": 15,
+   "dt": 1
+  },
+  {
+   "id": "sample",
+   "n": "Sample cache",
+   "t": "sampling",
+   "m": 350,
+   "c": 60,
+   "pts": 30,
+   "rel": 0.94,
+   "d": "Collects rock",
+   "pw": 40,
+   "dt": 3
+  },
+  {
+   "id": "heli",
+   "n": "Scout copter",
+   "t": "aerial",
+   "m": 60,
+   "c": 45,
+   "pts": 22,
+   "rel": 0.9,
+   "d": "Flies over Mars",
+   "pw": 30,
+   "dt": 15
+  },
+  {
+   "id": "drill",
+   "n": "Ice drill",
+   "t": "drilling",
+   "m": 180,
+   "c": 50,
+   "pts": 25,
+   "rel": 0.93,
+   "d": "Hunts for ice",
+   "pw": 50,
+   "dt": 6
+  },
+  {
+   "id": "shield",
+   "n": "Radiation shield",
+   "t": "protect",
+   "m": 200,
+   "c": 20,
+   "pts": 0,
+   "rel": 0.99,
+   "d": "Blocks solar flares",
+   "pw": 0,
+   "dt": 0
+  },
+  {
+   "id": "relay",
+   "n": "Relay antenna",
+   "t": "comms",
+   "m": 80,
+   "c": 15,
+   "pts": 0,
+   "rel": 0.97,
+   "d": "Keeps signal alive",
+   "pw": 20,
+   "dt": 0
+  },
+  {
+   "id": "navcam",
+   "n": "Nav camera",
+   "t": "nav",
+   "m": 40,
+   "c": 30,
+   "pts": 0,
+   "rel": 0.97,
+   "d": "Spots boulders, fixes course",
+   "pw": 10,
+   "dt": 0
+  }
+ ],
+ "power": [
+  {
+   "id": "solar_s",
+   "n": "Small solar panels",
+   "d": "1.5 m² of panels",
+   "m": 50,
+   "c": 15,
+   "area": 1.5
+  },
+  {
+   "id": "solar_l",
+   "n": "Large solar panels",
+   "d": "4 m² of panels",
+   "m": 120,
+   "c": 32,
+   "area": 4
+  },
+  {
+   "id": "rtg",
+   "n": "Nuclear battery (RTG)",
+   "d": "110 W day and night, like Perseverance",
+   "m": 45,
+   "c": 75,
+   "w": 110
+  },
+  {
+   "id": "solar_xl",
+   "n": "Giant solar arrays",
+   "d": "30 m² of panels, like Europa Clipper",
+   "m": 380,
+   "c": 85,
+   "area": 30
+  },
+  {
+   "id": "fission",
+   "n": "Fission reactor (SR-1 style)",
+   "d": "800 W anywhere, a first for deep space",
+   "m": 700,
+   "c": 120,
+   "w": 800
+  }
+ ],
+ "batteries": [
+  {
+   "id": "bat_none",
+   "n": "No battery",
+   "d": "Runs only in sunlight",
+   "m": 0,
+   "c": 0,
+   "wh": 0
+  },
+  {
+   "id": "bat_s",
+   "n": "Small battery",
+   "d": "600 Wh for the night",
+   "m": 30,
+   "c": 8,
+   "wh": 600
+  },
+  {
+   "id": "bat_l",
+   "n": "Large battery",
+   "d": "1,500 Wh for the night",
+   "m": 75,
+   "c": 18,
+   "wh": 1500
+  }
+ ],
+ "antennas": [
+  {
+   "id": "lga",
+   "n": "Low-gain antenna",
+   "d": "Tiny and cheap, very slow",
+   "m": 5,
+   "c": 2,
+   "pw": 5,
+   "k": 0.4
+  },
+  {
+   "id": "mga",
+   "n": "Medium-gain antenna",
+   "d": "A good middle choice",
+   "m": 15,
+   "c": 8,
+   "pw": 20,
+   "k": 8
+  },
+  {
+   "id": "hga",
+   "n": "High-gain dish",
+   "d": "Fast data, heavy and costly",
+   "m": 45,
+   "c": 22,
+   "pw": 60,
+   "k": 40
+  }
+ ],
+ "orbits": [
+  {
+   "id": "low",
+   "n": "Low orbit",
+   "d": "Sharper science, costs more fuel",
+   "dvm": 1.25,
+   "sci": 1.1
+  },
+  {
+   "id": "high",
+   "n": "High orbit",
+   "d": "Saves fuel, blurrier science",
+   "dvm": 0.8,
+   "sci": 0.92
+  }
+ ],
+ "windows": [
+  {
+   "id": "opt",
+   "n": "Optimal window",
+   "d": "Least fuel, but weather may delay launch",
+   "dv": 0,
+   "scrub": 0.12
+  },
+  {
+   "id": "wide",
+   "n": "Wide window",
+   "d": "Plan for delay: +300 m/s, never scrubbed",
+   "dv": 300,
+   "scrub": 0
+  }
+ ],
+ "goals": [
+  [
+   "mobility",
+   "Drive on the surface",
+   40
+  ],
+  [
+   "atmosphere",
+   "Measure the atmosphere",
+   20
+  ],
+  [
+   "sampling",
+   "Collect a sample",
+   30
+  ],
+  [
+   "aerial",
+   "Fly over the surface",
+   22
+  ],
+  [
+   "drilling",
+   "Drill for ice",
+   25
+  ]
+ ],
+ "missions": {
+  "mars": {
+   "id": "mars",
+   "n": "Mars",
+   "name": "Mars mission",
+   "hint": "The real challenge",
+   "bud": 520,
+   "plim": 2000,
+   "tr": [
+    {
+     "id": "fast",
+     "n": "Fast trip",
+     "d": "180 days",
+     "dv": 4300,
+     "days": 180
+    },
+    {
+     "id": "slow",
+     "n": "Slow trip",
+     "d": "260 days",
+     "dv": 3600,
+     "days": 260
+    }
+   ],
+   "o": 900,
+   "l": 600,
+   "g": [
+    "mobility",
+    "atmosphere",
+    "sampling",
+    "aerial",
+    "drilling"
+   ],
+   "ev": [
+    0.15,
+    0.12,
+    0.15,
+    0.2,
+    0,
+    0.08,
+    0.1,
+    0.15,
+    0.05
+   ],
+   "story": "Perseverance searched Jezero Crater for signs of ancient life. Your lander follows it, carrying new instruments to the Red Planet.",
+   "irr": 586,
+   "dau": 1.5
+  },
+  "moon": {
+   "id": "moon",
+   "n": "the Moon",
+   "name": "Moon tutorial",
+   "hint": "Easy start: short trip, few hazards",
+   "bud": 340,
+   "plim": 1200,
+   "tr": [
+    {
+     "id": "fast",
+     "n": "Direct trip",
+     "d": "3 days",
+     "dv": 2400,
+     "days": 3
+    },
+    {
+     "id": "slow",
+     "n": "Gentle trip",
+     "d": "6 days",
+     "dv": 2100,
+     "days": 6
+    }
+   ],
+   "o": 400,
+   "l": 1000,
+   "g": [
+    "mobility",
+    "sampling",
+    "drilling"
+   ],
+   "ev": [
+    0.08,
+    0.06,
+    0,
+    0,
+    0,
+    0.05,
+    0.06,
+    0.12,
+    0.03
+   ],
+   "far": 62,
+   "story": "Apollo proved humans can reach the Moon. Now a robotic explorer heads for the lunar south pole, where NASA scientists have looked for water ice.",
+   "irr": 1361,
+   "dau": 0.00257
+  },
+  "asteroid": {
+   "id": "asteroid",
+   "n": "the asteroid",
+   "name": "Asteroid sample return",
+   "hint": "Hazard: a debris field on the way",
+   "bud": 450,
+   "plim": 1500,
+   "tr": [
+    {
+     "id": "fast",
+     "n": "Direct trip",
+     "d": "6 months",
+     "dv": 3300,
+     "days": 180
+    },
+    {
+     "id": "slow",
+     "n": "Gravity assist",
+     "d": "14 months",
+     "dv": 2900,
+     "days": 420
+    }
+   ],
+   "o": 500,
+   "l": 250,
+   "g": [
+    "sampling",
+    "drilling",
+    "atmosphere"
+   ],
+   "ev": [
+    0.12,
+    0.12,
+    0.1,
+    0,
+    0.35,
+    0.1,
+    0.12,
+    0.1,
+    0.1
+   ],
+   "far": 120,
+   "story": "Bennu is a rubble-pile asteroid holding material from the early solar system. Reach it, grab a sample, and survive the debris field.",
+   "lab": {
+    "sampling": "Grab a surface sample",
+    "drilling": "Drill below the surface",
+    "atmosphere": "Scan for dust and gas"
+   },
+   "irr": 1073,
+   "dau": 1.2
+  },
+  "europa": {
+   "id": "europa",
+   "n": "Europa",
+   "name": "Europa: the ocean frontier",
+   "hint": "The outer frontier: faint sunlight, harsh radiation",
+   "bud": 640,
+   "plim": 1500,
+   "tr": [
+    {
+     "id": "fast",
+     "n": "Direct trip",
+     "d": "about 3 years",
+     "dv": 4900,
+     "days": 1100
+    },
+    {
+     "id": "slow",
+     "n": "Gravity assists",
+     "d": "about 5.5 years",
+     "dv": 4300,
+     "days": 2000
+    }
+   ],
+   "o": 1200,
+   "l": 650,
+   "g": [
+    "sampling",
+    "drilling",
+    "atmosphere"
+   ],
+   "ev": [
+    0.15,
+    0.3,
+    0.2,
+    0,
+    0,
+    0.1,
+    0.12,
+    0.12,
+    0.08
+   ],
+   "far": 200,
+   "irr": 50,
+   "dau": 5.2,
+   "story": "Beneath Europa ice lies a salty ocean with about twice the water of all Earth oceans. NASA Europa Clipper is on its way. Your lander follows into the harshest radiation of any planet.",
+   "lab": {
+    "sampling": "Collect surface ice",
+    "drilling": "Probe beneath the ice",
+    "atmosphere": "Sniff the thin oxygen atmosphere"
+   }
+  }
+ },
+ "difficulty": {
+  "standard": {
+   "n": "Standard",
+   "b": 1,
+   "e": 1,
+   "r": 1
+  },
+  "intermediate": {
+   "n": "Intermediate",
+   "b": 0.92,
+   "e": 1.35,
+   "r": 0.98
+  },
+  "hard": {
+   "n": "Hard",
+   "b": 0.82,
+   "e": 1.8,
+   "r": 0.95
+  }
+ },
+ "upgrades": [
+  {
+   "id": "isp",
+   "n": "Efficient engines",
+   "d": "+4% engine efficiency",
+   "c": 60
+  },
+  {
+   "id": "mass",
+   "n": "Lighter materials",
+   "d": "6% lighter craft",
+   "c": 60
+  },
+  {
+   "id": "rel",
+   "n": "Quality control",
+   "d": "+2% reliability on every part",
+   "c": 80
+  },
+  {
+   "id": "bud",
+   "n": "Sponsor funding",
+   "d": "+30M budget",
+   "c": 50
+  }
+ ],
+ "defaults": {
+  "europa": {
+   "r": "condor",
+   "b": "hydrolox",
+   "f": 6500,
+   "p": [
+    "sample",
+    "drill",
+    "relay"
+   ],
+   "t": "slow",
+   "w": "solar_xl",
+   "y": "bat_l",
+   "a": "hga",
+   "o": "high",
+   "l": "opt"
+  },
+  "mars": {
+   "r": "condor",
+   "b": "hydrolox",
+   "f": 6000,
+   "p": [
+    "rover",
+    "atmo",
+    "relay"
+   ],
+   "t": "slow",
+   "w": "solar_l",
+   "y": "bat_s",
+   "a": "mga",
+   "o": "high",
+   "l": "opt"
+  },
+  "moon": {
+   "r": "sparrow",
+   "b": "basic",
+   "f": 2400,
+   "p": [
+    "drill"
+   ],
+   "t": "slow",
+   "w": "solar_s",
+   "y": "bat_none",
+   "a": "lga",
+   "o": "high",
+   "l": "opt"
+  },
+  "asteroid": {
+   "r": "condor",
+   "b": "basic",
+   "f": 4000,
+   "p": [
+    "sample",
+    "drill"
+   ],
+   "t": "slow",
+   "w": "solar_s",
+   "y": "bat_s",
+   "a": "mga",
+   "o": "high",
+   "l": "opt"
+  }
+ }
+}
